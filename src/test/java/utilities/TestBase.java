@@ -2,7 +2,7 @@ package utilities;
 import com.aventstack.extentreports.ExtentReports;
 import com.aventstack.extentreports.ExtentTest;
 import com.aventstack.extentreports.reporter.ExtentHtmlReporter;
-import io.github.bonigarcia.wdm.WebDriverManager;
+
 import org.apache.commons.io.FileUtils;
 import org.apache.poi.ss.usermodel.Workbook;
 import org.apache.poi.ss.usermodel.WorkbookFactory;
@@ -33,7 +33,8 @@ public abstract class TestBase {
     protected static ExtentTest extentTest;//Tüm test aşamalarında extentTest objesi ile bilgi ekleriz
     @Before
     public void setUp() throws Exception {
-        WebDriverManager.chromedriver().setup();
+        //selenium java 4.12 güncellemesi sonrası  pom.xml den bonigarcia yı kaldırdık ve webdrivermaneger a gerek kalmadı.
+
         driver = new ChromeDriver(new ChromeOptions().addArguments("--remote-allow-origins=*"));
         driver.manage().window().maximize();
         driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(15));

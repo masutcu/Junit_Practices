@@ -1,6 +1,6 @@
 package prc_01;
 
-import io.github.bonigarcia.wdm.WebDriverManager;
+
 import org.openqa.selenium.By;
 import org.openqa.selenium.Keys;
 import org.openqa.selenium.WebDriver;
@@ -19,7 +19,7 @@ public class C02 {
         // sonuc sayısının 100000000  fazla oldugunu test edin
         // sayfayı kapatın
 
-        WebDriverManager.chromedriver().setup();
+
 
         WebDriver driver = new ChromeDriver(new ChromeOptions().addArguments("--remote-allow-origins=*"));
         driver.manage().window().maximize();

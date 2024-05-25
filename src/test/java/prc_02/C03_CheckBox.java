@@ -1,7 +1,7 @@
 package prc_02;
 
-import com.fasterxml.jackson.annotation.JsonTypeInfo;
-import io.github.bonigarcia.wdm.WebDriverManager;
+
+
 import org.junit.*;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
@@ -23,7 +23,7 @@ public class C03_CheckBox {
     @Before
     public void setUp() throws Exception {
 
-        WebDriverManager.chromedriver().setup();
+
         driver = new ChromeDriver(new ChromeOptions().addArguments("--remote-allow-origins=*"));
         driver.manage().window().maximize();
         driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(15));

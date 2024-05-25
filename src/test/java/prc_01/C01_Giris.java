@@ -1,6 +1,6 @@
 package prc_01;
 
-import io.github.bonigarcia.wdm.WebDriverManager;
+
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
@@ -16,7 +16,7 @@ public class C01_Giris {
         // arama kutusunun, name attribute'nun degerinin 'field-keywords' oldugunu test edin
         // sayfayi kapatiniz
 
-        WebDriverManager.chromedriver().setup();
+
 
         WebDriver driver = new ChromeDriver(new ChromeOptions().addArguments("--remote-allow-origins=*"));
         driver.manage().window().maximize();
